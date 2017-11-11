@@ -53,5 +53,10 @@ The template manager is what manages templates loading and installation, and ass
 - Make two more front modules for content display **[2pt]**
 - Improve the *front\_content* module for search and category display **[2pt]**
 - Improve the *admin\_settings\_templates* module so it can display more than one thumbnail **[1pt]**
+- Generer notre propre commandde pour les tests **[1pt]** (php bin/console generate:command)
 
 > Do not hesitate to send me a mail if you consider this bonus list can be extended
+
+
+## TODO
+ -Les routes sont faites, mais elles n'executent rien. RouteBundle / DefautlController.php
