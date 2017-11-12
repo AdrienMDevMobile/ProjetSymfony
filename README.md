@@ -1,4 +1,4 @@
-Custom CMS Project Adrien MICHEL Lucas HEILIGENSTEIN Jordan CUVES
+Custom CMS Project Adrien MICHEL Lucas HEILIGENSTEIN Jordan BERFROI
 ==============
 
 - [Custom CMS Project](#custom-cms-project)
