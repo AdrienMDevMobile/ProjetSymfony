@@ -47,14 +47,14 @@ class HookExtension extends Twig_Extension
         // @todo Make the hook function
         //       1. Load hook from DB
         //       2. Load modules ID registered with the hook
-        $repo = $em->getRepository(Hook::class);
+        $repo = $this->em->getRepository(Hook::class);
 
         $hook = $repo->findOneByName($hook_name);
         $hookId = $hook->getId();
 
         //       3. Load modules
 
-        $repoHookModule = $em->getRepository(HookModule::class);
+        $repoHookModule = $this->em->getRepository(HookModule::class);
         $module = $repoHookModule->findByIdHook($hookId);
 
         //       4. Sort them using hook modules position
