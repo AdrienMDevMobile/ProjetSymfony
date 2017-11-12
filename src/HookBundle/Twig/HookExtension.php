@@ -61,9 +61,11 @@ class HookExtension extends Twig_Extension
         $moduleSorted = asort($module);
 
         //       5. Render each module view
+        $this->mm->load($moduleSorted);
 
 
         //       6. Return HTML
+
     }
 
     public function getName()

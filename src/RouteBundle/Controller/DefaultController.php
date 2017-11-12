@@ -21,28 +21,28 @@ class DefaultController extends Controller
      * @Route("/category/{slug}", name="front_category")
      */
 	public function front_category($slug){
-			  
+        return $this->render("::front.html.twig");
 	}
     
     /**
      * @Route("/category/{category}/article/{slug}", name="front_article")
      */
     public function front_article($category, $slug){
-        
+         return $this->render("::front.html.twig");
     }
     
     /**
      * @Route("/search", name="front_search")
      */
     public function front_search(){
-        
+         return $this->render("::front.html.twig");
     }
     
     /**
      * @Route("/login", name="front_login")
      */
     public function front_login(){
-        
+         return $this->render("::front.html.twig");
     }
     
     /*==========================ADMIN==========================*/
@@ -60,7 +60,7 @@ class DefaultController extends Controller
      */
     //[options] set to null by default
     public function admin_settings($options){
-        
+         return $this->render("::admin.html.twig");
     }
     
     /*
@@ -68,7 +68,7 @@ class DefaultController extends Controller
      */
     //with [options] set to null by default
     public function admin_modules($options){
-        
+        return $this->render("::admin.html.twig");
     }
     
     /*
@@ -76,7 +76,7 @@ class DefaultController extends Controller
      */
     //with [options] set to null by default
     public function admin_content($options){
-        
+        return $this->render("::admin.html.twig");
     }
     
     
