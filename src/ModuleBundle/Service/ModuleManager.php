@@ -66,6 +66,13 @@ class ModuleManager
      */
     public function activate($module_name)
     {
+        
+        $module = $this->em->getRepository("ModuleBundle:Module")->findOneByName($module_name);
+        if($module){
+            $this->em->setActivate(true);
+            $this->em->flush();
+        }
+
         // @todo Make the activate method
         //       Find the module and update its value
 
@@ -80,6 +87,15 @@ class ModuleManager
      */
     public function deactivate($module_name)
     {
+       
+
+        $module = $this->em->getRepository("ModuleBundle:Module")->findOneByName($module_name);
+        if($module){
+            $this->em->setActivate(false);
+            $this->em->flush();
+        }
+
+
         // @todo Make the deactivate method
         //       Find the module and update its value
 

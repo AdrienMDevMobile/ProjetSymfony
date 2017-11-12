@@ -8,6 +8,10 @@ use Twig_SimpleFunction;
 use Doctrine\ORM\EntityManager;
 use ModuleBundle\Service\ModuleManager;
 
+//Importation des Entities
+use HookBundle\Entity\Hook;
+use HookBundle\Entity\Hookodule;
+
 class HookExtension extends Twig_Extension
 {
     private $em;
@@ -39,12 +43,26 @@ class HookExtension extends Twig_Extension
      */
     public function hookFunction(Twig_Environment $env, $hook_name, $page_name)
     {
+
         // @todo Make the hook function
         //       1. Load hook from DB
         //       2. Load modules ID registered with the hook
+        $repo = $em->getRepository(Hook::class);
+
+        $hook = $repo->findOneByName($hook_name);
+        $hookId = $hook->getId();
+
         //       3. Load modules
+
+        $repoHookModule = $em->getRepository(HookModule::class);
+        $module = $repoHookModule->findByIdHook($hookId);
+
         //       4. Sort them using hook modules position
+        $moduleSorted = asort($module);
+
         //       5. Render each module view
+
+
         //       6. Return HTML
     }
 

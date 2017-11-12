@@ -7,7 +7,7 @@ security:
     role_hierarchy:
         ROLE_ADMIN:       ROLE_USER
         ROLE_SUPER_ADMIN: ROLE_ADMIN
-        #Création du role ROLE_WRITER qui extends ROLE_USER
+        #Création du role ROLE_WRITER qui extends ROLE_USER ::
         ROLE_WRITER:      ROLE_USER
 
     providers:
