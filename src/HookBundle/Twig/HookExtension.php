@@ -10,7 +10,7 @@ use ModuleBundle\Service\ModuleManager;
 
 //Importation des Entities
 use HookBundle\Entity\Hook;
-use HookBundle\Entity\Hookodule;
+use HookBundle\Entity\HookModule;
 
 class HookExtension extends Twig_Extension
 {
