@@ -56,6 +56,8 @@ class CategoryManager
     {
         // @todo Make the get method
         //       Find a category from ID or if no ID find all categories, then return
+        $this->em->getRepository(Category::class);
+        
          if($id == null){
            $category = $this->em->findAll();
         }
@@ -76,6 +78,7 @@ class CategoryManager
     {
         // DONE Make the create method
         //       Find the category and delete it
+        $this->em->getRepository(Category::class);
         $category = $this->em->findOneById($id)
         $this->em->remove($category);
         $this->em->flush();

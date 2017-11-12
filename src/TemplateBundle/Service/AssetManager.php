@@ -14,6 +14,7 @@ class AssetManager
     private $kernel;
     private $template_manager;
     private $route_name;
+    private $am;
 
     public function __construct(AppKernel $kernel, TemplateManager $template_manager, RequestStack $request)
     {

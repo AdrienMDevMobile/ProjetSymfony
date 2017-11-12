@@ -65,6 +65,8 @@ class ArticleManager
         // DONE Make the get method
         //       Find an article from ID or if no ID find all articles, then return
         
+        $this->em->getRepository(Article::class);
+        
         if($id == null){
             $article = $this->em->findAll();
         }
@@ -84,7 +86,7 @@ class ArticleManager
     {
         // DONE Make the delete method
         //       Find the article and delete it
-       
+        $this->em->getRepository(Article::class);
         $article = $this->em->findOneById($id); 
         $this->em->remove($article);
         $this->em->flush();

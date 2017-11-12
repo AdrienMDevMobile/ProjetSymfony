@@ -65,6 +65,8 @@ class UserManager
     {
         // @todo Make the get method
         //       Find a user from ID or get all users, then return
+        $this->em->getRepository(User::class);
+        
         if($id == null){
            $user = $this->em->findAll();
         }
@@ -89,7 +91,7 @@ class UserManager
     {
         // DONE Make the delete method
         //       Delete a user
-        
+        $this->em->getRepository(User::class);
         $user = $this->em->findOneById($id);
         $this->em->remove($user);
         $this->em->flush();
